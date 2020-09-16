@@ -7,7 +7,6 @@ console.log(document);
 
   let j = 1;
 
-
 //put images into seperate div
 for (i = 1; i <= 7; i++) {
   let goatImage = document.createElement("img");
