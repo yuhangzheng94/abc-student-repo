@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin-top: 5%;
+  background-color: #000000;
+}
+
+#createSquareDiv {
+  margin-left: auto;
+  margin-right: auto;
+  width: 32%;
+  /* border: 1px solid grey; */
+}
+
+#squaresNumberInput {
+  height: 25px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#createSquaresBtn {
+  height: 30px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
