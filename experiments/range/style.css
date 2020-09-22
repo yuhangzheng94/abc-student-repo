@@ -1,0 +1,12 @@
+#myValue {
+  position: relative;
+
+}
+
+#myRange {
+  position: relative;
+  left: -99px;
+  margin-left: 102px;
+}
+
+/* Advanced Loop: forEach method */
