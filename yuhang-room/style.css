@@ -1,0 +1,33 @@
+html, body {
+  height: calc(100% - 30px);
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+.cyberlink, .cybertext {
+  font-family: "VT323";
+  font-size: 45px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.cybertext {
+  color: white;
+  text-shadow: #46C016 0px 0px 5px, #46C016 0px 0px 10px, #46C016 0px 0px 15px, #46C016 0px 0px 20px, #46C016 0px 0px 30px, #46C016 0px 0px 40px, #46C016 0px 0px 50px;
+}
+
+.cyberlink {
+  color: #46C016;
+  text-shadow: none;
+}
+
+.cyberlink:hover {
+  color: white;
+  background-color: #46C016;
+  cursor: pointer;
+}
+.cyberlink::selection {
+  background-color: #46C016;
+}
