@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#box {
+  margin: auto;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #00976d;
+  margin: 20px;
+  transition: transform 2s;
+  /* how to align this damn box?? */
+}
+
+#button {
+  transition: transform 2s;
+  cursor: pointer;
+}
