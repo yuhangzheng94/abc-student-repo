@@ -6,6 +6,6 @@
 body {
   background-color: blue;
   animation-name: blueToRed;
-  animation-duration: 50s;
+  animation-duration: 35s;
   animation-fill-mode: forwards;
 }
