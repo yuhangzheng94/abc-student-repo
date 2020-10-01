@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#instructions-box {
+  display: flex;
+  margin: auto;
+  width: 50vw;
+}
+
+#instructions {
+  font-family: sans-serif;
+  font-size: 1.2em;
+}
+
+#button {
+  display: flex;
+  margin: auto;
+  padding: 10px;
+
+  font-family: sans-serif;
+  font-size: 1.2em;
+
+  background-color: black;
+  color: white;
+
+  border: none;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: green;
+}

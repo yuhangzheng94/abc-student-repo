@@ -1,0 +1,11 @@
+@keyframes blueToRed {
+  0% { background-color: blue; }
+  100% { background-color: red; }
+}
+
+body {
+  background-color: blue;
+  animation-name: blueToRed;
+  animation-duration: 50s;
+  animation-fill-mode: forwards;
+}
