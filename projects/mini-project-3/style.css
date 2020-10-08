@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+
+  position: relative;
+  left: calc(50% - 55px);
+  top: calc(50% - 55px);
+}
+
+.box:hover {
+  cursor: pointer;
+}
