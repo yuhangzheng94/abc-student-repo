@@ -14,8 +14,8 @@ let myInterval = setInterval(()=>{
   setTimeout(()=>{
     clearInterval(myInterval2);
     drop.close();
-  },2000);
-},2000);
+  },2500);
+},2550);
 
 setTimeout(()=>{
   clearInterval(myInterval);
