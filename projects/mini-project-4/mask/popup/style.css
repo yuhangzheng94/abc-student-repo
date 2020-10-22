@@ -1,0 +1,26 @@
+body {
+  width: 200px;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+button {
+  font-size: 1.2em;
+
+  border-radius: 5px;
+  border-style: none;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  color: white;
+  cursor: pointer;
+}
+#btn-yes {
+  background-color: green;
+  margin-right: 20px;
+}
+#btn-no {
+  background-color: red;
+}
