@@ -1,0 +1,17 @@
+{
+  "name":"Counter",
+  "version": "1.0",
+  "description": "counts values",
+  "manifest_version": 2,
+
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action":{
+    "default_popup": "popup/popup.html"
+  }
+}
