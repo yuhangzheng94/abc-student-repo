@@ -2,7 +2,7 @@
 
 ## Quick Access
 
-Click [here](https://github.com/yuhangzheng94/abc-student-repo/blob/master/projects/mini-project-4/mask.zip) to download the .zip file of this project.
+Click [here](https://github.com/yuhangzheng94/abc-student-repo/blob/master/projects/mini-project-4/mask.zip?raw=true) to download the .zip file of this project.
 
 ## description
 
