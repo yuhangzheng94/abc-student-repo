@@ -16,4 +16,4 @@ If we activate a tab (for example, we click tab "NYU Shanghai"):
 
 If we move a tab around within the window (pay attention to the movement of tab "Yuhang's Room"):
 
-![](https://github.com/yuhangzheng94/abc-student-repo/blob/master/projects/mini-project-4/screenshots/1-onMoved.png "onMoved")
+![](https://github.com/yuhangzheng94/abc-student-repo/blob/master/projects/mini-project-5/screenshots/1-onMoved.png "onMoved")
