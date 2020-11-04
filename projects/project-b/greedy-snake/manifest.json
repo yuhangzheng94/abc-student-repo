@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Molly & Yuhang | Greedy Snake",
+  "version": "1.0",
+  "author": "Molly & Yuhang",
+  "description": "Enter 'snake' to wake the greedy snake and press arrow keys to control its movement. Have fun!",
+
+  "permissions":[
+    "activeTab"
+  ],
+  "content_scripts":[
+    {
+      "matches": ["<all_urls>"],
+      "js":["p5.js","sketch.js","findAndReplaceDomText.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon/snake-16.png"
+    }
+  },
+  "icons": {
+    "48": "icon/snake-32.png",
+    "128": "icon/snake-128.png"
+  }
+}
