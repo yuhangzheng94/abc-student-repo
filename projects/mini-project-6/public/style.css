@@ -1,0 +1,47 @@
+body {
+  background-color: #ffffff;
+}
+
+#profile {
+  position: fixed;
+  top: calc(30vh - 100px);
+  left: calc(50vw - 100px);
+  text-align: center;
+}
+
+#name {
+  height: auto;
+  width: auto;
+  font-family: "Helvetica";
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+#prompt {
+  height: 5%;
+  width: 100%;
+  position: fixed;
+  top: calc(35vh + 100px);
+  left: 0;
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
+
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+input {
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+button {
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
