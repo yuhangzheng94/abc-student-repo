@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000 // glitch: const port = process.env.PORT
+const port = process.env.PORT
 const magicWord = "Shazam";
 
 app.use(express.static('public'));
