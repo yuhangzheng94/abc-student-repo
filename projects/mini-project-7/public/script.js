@@ -1,46 +1,40 @@
 console.log('Hi script.js');
 
 let socket = io();
-let boxNo = 0;
+
 let wh = window.innerHeight;
 let ww = window.innerWidth;
-let boxWidth = 50;
-let boxHeight = 50;
 
-socket.on('initData', (initData)=>{
-  userCount = initData["userCount"];
+socket.on('initData', (boxDict)=>{
+  userCount = boxDict.length;
   console.log("initial user count:", userCount);
-  for (i=1;i<=userCount;i++) {
-    addBox();
-  }
-  boxNo = userCount;
-});
-
-socket.on("countChange", (change) => {
-  if ( change == "connect" ) {
-    userCount += 1;
-    console.log("user++; user count:", userCount);
-    addBox();
-  } else if ( change == "disconnect" ) {
-    userCount -= 1;
-    console.log("user--; user count:", userCount);
-    removeBox();
+  for ( let key in boxDict ) {
+    let boxAttributes = boxDict[key];
+    addBox(boxAttributes);
   }
 });
 
-function addBox() {
-  boxNo += 1;
+socket.on("newBox", (newBox) => {
+  addBox(newBox);
+});
+
+socket.on("deleteBox", (boxId) => {
+  removeBox(boxId);
+});
+
+function addBox(boxAttributes) {
   let box = document.createElement("div");
-  box.id = "box" + boxNo;
-  boxTop = Math.random() * ( wh - boxHeight );
-  boxLeft = Math.random() * ( ww - boxWidth );
-  box.style.cssText = "position: absolute; background-color: black; width:" + boxWidth + "px; height:" + boxHeight + "px; top:" + boxTop+ "px; left:" + boxLeft + "px; margin: 0px" ;
+  box.id = boxAttributes["boxId"];
+  let bt = boxAttributes["boxTop"];
+  let bl = boxAttributes["boxLeft"];
+  let bel = boxAttributes["boxEdgeLength"];
+  bt *= ( 1 - bel / wh) * 100;
+  bl *= ( 1 - bel / ww) * 100;
+  box.style.cssText = "position: absolute; background-color: black; width:" + bel + "px; height:" + bel + "px; top:" + bt + "vh; left:" + bl + "vw; margin: 0px" ;
   document.body.appendChild(box);
 }
 
-function removeBox() {
-  boxNo -= 1;
-  let boxId = "box" + boxNo;
+function removeBox(boxId) {
   let box = document.getElementById(boxId)
   document.body.removeChild(box);
 }

@@ -4,6 +4,12 @@ let http = require('http').createServer(app);
 let io = require('socket.io')(http);
 
 let userCount = 0;
+let boxNo = 0;
+
+let socketBoxDict = {};
+let boxDict = {};
+
+let bel = 50; // boxEdgeLength
 
 app.use( express.static('public') );
 
@@ -15,15 +21,28 @@ io.on('connection', (socket) => {
   userCount += 1;
   console.log('A user connected, user count:', userCount);
 
-  initData = { userCount: userCount };
-  socket.emit("initData", initData);
+  boxNo += 1;
+  boxId = "box" + boxNo;
+  bt = Math.random(); //boxTop
+  bl = Math.random(); //boxLeft
 
-  socket.broadcast.emit("countChange", "connect");
+  let newBox = { boxId: boxId, boxTop: bt, boxLeft: bl, boxEdgeLength: bel * ( 1 + Math.random() ) };
+
+  socketBoxDict[socket.id] = boxId;
+  boxDict[boxId] = newBox;
+
+  socket.emit("initData", boxDict);
+  socket.broadcast.emit("newBox", newBox);
 
   socket.on('disconnect', () => {
     userCount -= 1;
     console.log('A User disconnected, user count:', userCount);
-    io.emit("countChange", "disconnect");
+
+    socketId = socket.id;
+    boxId = socketBoxDict[socket.id];
+    io.emit("deleteBox", boxId);
+    delete socketBoxDict[socketId];
+    delete boxDict[boxId];
   });
 
 });
