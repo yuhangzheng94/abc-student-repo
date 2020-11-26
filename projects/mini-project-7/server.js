@@ -22,9 +22,9 @@ io.on('connection', (socket) => {
   console.log('A user connected, user count:', userCount);
 
   boxNo += 1;
-  boxId = "box" + boxNo;
-  bt = Math.random(); //boxTop
-  bl = Math.random(); //boxLeft
+  let boxId = "box" + boxNo;
+  let bt = Math.random(); //boxTop
+  let bl = Math.random(); //boxLeft
 
   let newBox = { boxId: boxId, boxTop: bt, boxLeft: bl, boxEdgeLength: bel * ( 1 + Math.random() ) };
 
@@ -38,8 +38,8 @@ io.on('connection', (socket) => {
     userCount -= 1;
     console.log('A User disconnected, user count:', userCount);
 
-    socketId = socket.id;
-    boxId = socketBoxDict[socket.id];
+    let socketId = socket.id;
+    let boxId = socketBoxDict[socket.id];
     io.emit("deleteBox", boxId);
     delete socketBoxDict[socketId];
     delete boxDict[boxId];
