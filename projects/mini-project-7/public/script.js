@@ -24,6 +24,7 @@ socket.on("deleteBox", (boxId) => {
 
 function addBox(boxAttributes) {
   let box = document.createElement("div");
+  box.class = "box";
   box.id = boxAttributes["boxId"];
   let bt = boxAttributes["boxTop"];
   let bl = boxAttributes["boxLeft"];
