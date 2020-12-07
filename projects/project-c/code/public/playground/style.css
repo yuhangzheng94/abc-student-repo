@@ -1,0 +1,41 @@
+body {
+  height: 100%;
+}
+
+
+#note-container {
+  width: 100%;
+  height: 100%;
+}
+
+#paper {
+  background-color: grey;
+  border: 1px solid black;
+  width: 900px;
+  height: 600px;
+  margin: auto;
+}
+
+#config-container {
+  position: fixed;
+  visibility: hidden;
+  display: flex;
+  height: 200px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input-color, #select-font, #input-size, #btnSubmit {
+  margin: 10px;
+  display: block;
+}
+
+#btnSubmit {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid;
+  padding: 20px;
+  height: 50px;
+  width: 100px;
+}

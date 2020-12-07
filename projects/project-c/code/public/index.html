@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>NoteUniverse</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="bgWrapper">
+        <img id="bg" src="img/grass1.jpg" alt="">
+        <button type="button" id="rollButton">Add new paper</button> <br>
+
+      </div>
+
+      <div id="notesgroundWrapper">
+        <!-- <img id="p1" class="folded" src="img/folded.png" alt=""> -->
+      </div>
+
+
+      <div id="writingPage">
+        <!-- <input type="text" id="message" autocomplete="off" placeholder="input text here"> -->
+
+        <div id="paperWrapper">
+          <div id="content">
+
+            <!-- <div class="textDiv" style="left:60vw">
+              <p>ofjsdof</p>
+            </div>
+            <div class="textDiv">
+              <p>ofjsdof</p>
+            </div> -->
+          </div>
+          <img id="crumbled" src="img/crumbled.jpg" alt="">
+        </div>
+        <div id="configWrapper">
+          <button type="button" id="closeButton">X</button>
+
+          <div class="config" id="config-color">
+            <label style="font-family: Arial" for="input-color">Color:</label>
+            <input type="color" id="input-color" value="#000000">
+          </div>
+
+          <div class="config" id="config-font">
+            <label style="font-family: Arial" for="select-font">Font:</label>
+            <select id="select-font">
+              <option value="sans-serif" style="font-family:sans-serif">Sans-serif </option>
+              <option value="cursive" style="font-family:cursive">Cursive</option>
+              <option value="Arial" style="font-family:Arial">Arial</option>
+              <option value="Times" style="font-family:Times">Times</option>
+              <option value="Courier" style="font-family:Courier">Courier</option>
+              <option value="Verdana" style="font-family:Verdana">Verdana</option>
+              <option value="Georgia" style="font-family:Georgia">Georgia</option>
+              <option value="Garamond" style="font-family:Garamond">Garamond</option>
+              <option value="Tahoma" style="font-family:Tahoma">Tahoma</option>
+              <option value="Trebuchet" style="font-family:Trebuchet">Trebuchet</option>
+              <option value="Impact" style="font-family:Impact">Impact</option>
+            </select>
+          </div>
+          <div class="config" id="config-size">
+            <label style="font-family: Arial" for="input-size">Font Size:</label>
+            <input type="range" id="input-size" value="18" min="12" max="80">
+          </div>
+
+          <button type="button" id="sendButton">Send</button>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
