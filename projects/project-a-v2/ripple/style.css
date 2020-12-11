@@ -1,0 +1,11 @@
+html, body {
+  background-color: #72A2D0;
+}
+
+html:hover {
+  cursor: pointer;
+}
+
+/* window {
+  transition: 5s;
+} */
