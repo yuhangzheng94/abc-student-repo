@@ -1,0 +1,248 @@
+/* .paper{
+  border:4px solid black;
+  border-radius: 4px;
+} */
+/* .folded{
+  width:10vw
+} */
+
+
+:root {
+  --height: 600px;
+  --paperWidth: 900px;
+  --configWidth: 100px;
+}
+
+html, body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#wrapper {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#bgWrapper{
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#notesgroundWrapper{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+#bg{
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  height:100vh;
+  z-index:-1
+}
+
+#rollButton{
+  position: absolute;
+  top:90vh;
+  left:85vw;
+  z-index:10;
+  font-size: 20px;
+}
+.paper:hover{
+  cursor: pointer
+}
+.paper{
+  position: absolute;
+}
+@keyframes spin1 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform:rotate(-360deg);
+  }
+}
+
+
+#writingPage{
+  display: flex;
+  visibility:hidden;
+  margin:auto;
+  position: relative;
+  /* width: calc( var(--paperWidth) + var(--configWidth) );
+  height: var(--height); */
+  left: calc(50vw - 1/2* calc(var(--paperWidth) + var(--configWidth)));
+  top: calc(50vh - 1/2*var(--height));
+  z-index:2;
+}
+
+#paperWrapper{
+  display: flex;
+  /* left:10vw;
+  top:10vh; */
+  /* width:70vw;
+  height: 80vh; */
+  position: absolute;
+  width: var(--paperWidth);
+  height: var(--height);
+  top: 0;
+  left: 0;
+}
+
+#crumbled{
+  position: absolute;
+  /* left:10vw;
+  top:10vh; */
+  width: var(--paperWidth);
+  height: var(--height);
+  border-radius: 5px;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+#configWrapper{
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  width: var(--configWidth);
+  height: var(--height);
+  position: absolute;
+  left: var(--paperWidth);
+  top: 0;
+  /* top:10vh;
+  left:calc(10vw + 800px); */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+#closeButton{
+  position: absolute;
+  right:0;
+}
+#config-color, #config-font, #config-size{
+  margin-top: 90px;
+}
+#input-size{
+  width:80px;
+}
+#sendButton{
+  position: absolute;
+  bottom:20px;
+}
+.textDiv{
+  z-index:10;
+  position:absolute;
+  word-wrap: break-word;
+}
+/* .textP{
+  margin: 0;
+} */
+p{
+  padding: 5px;
+  line-height: 1.5em;
+  margin: 0;
+  /* font-family: sans-serif; */
+}
+#content{
+  position: absolute;
+  z-index: 10;
+  width: var(--paperWidth);
+  height:  var(--height);
+  /* width: 70vw;
+  height: 80vh;
+  left:10vw;
+  top:10vh; */
+
+}
+/* :root{
+  --borderThickness: 4px;
+}
+body{
+  background-color:#6156bd99;
+  margin: 0;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+p{
+  margin: 0;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.chatwrapper{
+  width:300px;
+  border:var(--borderThickness) solid black;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: -11px 11px 20px 10px black;
+  background-color: white;
+}
+.namebox{
+  border:var(--borderThickness) solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: right;
+  padding:10px;
+  margin-bottom: 5px;
+}
+.chatbox{
+  border:var(--borderThickness) solid black;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+#chat{
+  height: 160px;
+  overflow: scroll;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+#chat li{
+  margin-bottom: 3px;
+}
+#chat li:nth-child(odd){
+  background-color: pink;
+  color: white;
+}
+#chat li .sender{
+  color:purple;
+}
+.messagebox{
+  border:var(--borderThickness) solid black;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding:10px;
+}
+input{
+  font-size: 16px;
+}
+button{
+  font-size: 16px;
+}
+html{
+  scroll-behavior:smooth
+} */

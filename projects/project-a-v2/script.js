@@ -6,11 +6,11 @@ let sw = screen.width;
 let sh = screen.height;
 
 ripple.addEventListener("click",() => {
-  let pond = window.open("ripple/index.html","");
+  let pond = window.open("ripple/index.html","pond","width="+sw+", height="+sh+", top=0, left=0");
 });
 
 wave.addEventListener("click", ()=>{
-  let beach = window.open("wave/index.html","","width="+sw+", height="+sh*0.2+", top=0, left=0");
+  let beach = window.open("wave/index.html","","width="+sw+", height="+sh+", top=0, left=0");
 });
 
 drip.addEventListener("click", ()=>{
